@@ -2,14 +2,14 @@ import moment from "moment";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import { getRecentPosts } from "../services";
+import { getRecentPosts, getSimilarPosts } from "../services";
 
-function PostWidget({ slug }) {
+function PostWidget({ categories, slug }) {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (slug) {
-      getSimmilarPosts(category, slug).then((result) =>
+      getSimilarPosts(categories, slug).then((result) =>
         setRelatedPosts(result)
       );
     } else {
