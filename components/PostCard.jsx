@@ -3,8 +3,6 @@ import moment from "moment";
 import Link from "next/link";
 
 function PostCard({ post }) {
-  console.log(post);
-
   return (
     <div className="bg-white shadow-lg rounded-lg-0 p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden  shadow-md pb-80 mb-6">
