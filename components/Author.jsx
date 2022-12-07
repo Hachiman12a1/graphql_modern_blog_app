@@ -14,7 +14,7 @@ function Author({ author }) {
           className="rounded-full inline"
         />
       </div>
-      <h3 className="text-white my-4 text-xl font-bold">{author.name}</h3>
+      <h3 className="text-white my-10 text-xl font-bold">{author.name}</h3>
       <p className="text-white text-lg">{author.bio}</p>
     </div>
   );

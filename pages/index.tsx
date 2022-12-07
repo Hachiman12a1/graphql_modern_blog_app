@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import { Categories, PostCard, PostWidget } from "../components";
 import { getPosts } from "../services/index";
+import { FeaturedPosts } from "../sections";
 
 type PageProps = {
   posts: any[];
@@ -15,6 +16,7 @@ const Home: NextPage<PageProps> = ({ posts }) => {
         <title>CMS Blog</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.map((post) => (
@@ -23,7 +25,7 @@ const Home: NextPage<PageProps> = ({ posts }) => {
         </div>
         <div className="lg:col-span-4 col-span-1">
           <div className="lg:sticky relative top-8">
-            <PostWidget slug={undefined} categories = {undefined}/>
+            <PostWidget slug={undefined} categories={undefined} />
             <Categories />
           </div>
         </div>
